@@ -4,13 +4,9 @@ rocky = "C:/Users/yutaka_mahe/Downloads/maybe1.wav"
 champion = "C:/Users/yutaka_mahe/Downloads/rocky1.wav"
 print sample_duration champion
 
-sample intro, amp: 10
-wait 28.53
 
-sample champion, amp: 5
-sleep 8.5
 live_loop :water do
-  14.times do
+  12.times do
     use_synth :piano
     play:c
     play:e
@@ -49,4 +45,25 @@ live_loop :earth do
     x=x+0.5
   end
   stop
+end
+wait 10
+x=1
+4.times do
+  use_synth :piano
+  play:c, amp: x
+  play:e, amp: x
+  sleep 0.5
+  play:c, amp: x
+  play:e, amp: x
+  sleep 0.5
+  play:c, amp: x
+  play:e, amp: x
+  sleep 0.25
+  play:a, amp: x
+  sleep 0.25
+  play:a, amp: x
+  sleep 0.25
+  play:b, amp: x
+  sleep 0.5
+  x=x-0.33
 end
